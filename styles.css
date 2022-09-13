@@ -1,3 +1,4 @@
+.header, .footer{background: #DF7861;}
 * {
     padding: 0;
     box-sizing: border-box;
@@ -109,13 +110,20 @@ main>aside {
 
 img {width: 100%;}
 
-
 @media screen and (max-width: 700px) {
     main, .navbar {   
       flex-direction: column;
     }
   }
+  .header, .footer{
+    flex-grow: 1;
+    flex-basis: 100%;
+    padding: 10px;
+}
 
+@media all and (min-width: 780px){
+    .footer{order:4;}
+}
 /* -------------------------detallesReceta------- */
 
 aside{
@@ -135,9 +143,15 @@ aside{
 }
 
 .pasos {
+    display: grid;
     list-style-type: none;
     flex-direction: nowrap;
+    gap: 10px; /* espacio entre filas y columnas  */
+}
+.box {
     background-color: #ECB390;
+    padding: 10px;
+    text-align: center;
 }
 .pasos > div{
     background-color: #94B49F;
