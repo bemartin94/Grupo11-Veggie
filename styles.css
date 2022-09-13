@@ -62,7 +62,6 @@ main>aside {
     border: 2px blue solid;
     margin: 0.5rem;
     float: left;
-    width: auto;
 }
 
 .contenido-ppal { 
@@ -116,3 +115,31 @@ img {width: 100%;}
       flex-direction: column;
     }
   }
+
+/* -------------------------detallesReceta------- */
+
+aside{
+    background-color: #FCF8E8;
+    width: 20%;
+    padding: 20px;
+}
+
+@media screen and (max-width: 780px){
+    aside{
+        background-color: #94B49F;
+        width: 100%;
+    }
+    .pasos{
+        width: 100%;
+    }
+}
+
+.pasos {
+    list-style-type: none;
+    flex-direction: nowrap;
+    background-color: #ECB390;
+}
+.pasos > div{
+    background-color: #94B49F;
+    margin: 10px;
+}
