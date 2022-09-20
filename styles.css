@@ -1,3 +1,27 @@
+@media screen and (max-width: 780px){
+    aside{
+        background-color: #94B49F;
+        width: 100%;
+    }
+    .pasos{
+        width: 100%;
+    }
+    
+        main, .navbar {   
+          flex-direction: column;
+        }
+      
+      .header, .footer{
+        flex-grow: 1;
+        flex-basis: 100%;
+        padding: 10px;
+    }
+}
+
+
+@media all and (min-width: 780px){
+    .footer{order:4;}
+
 .header, .footer{background: #DF7861;}
 * {
     padding: 0;
@@ -73,8 +97,8 @@ main>aside {
 .recetas-grid {
     display: grid;
     grid-gap: 10px;
-    grid-template-columns: repeat(3, minmax(200px, 1fr) ) ;
-    grid-template-rows: repeat(2, [row] auto  );
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr) ) ;
+    grid-template-rows: repeat(auto-fit, minmax(200px, 1fr) );
     color: #FFF;
     align-items: center;
   }
@@ -140,20 +164,6 @@ main>aside {
 
 .header-menubar>img {width: 100%;}
 
-@media screen and (max-width: 700px) {
-    main, .navbar {   
-      flex-direction: column;
-    }
-  }
-  .header, .footer{
-    flex-grow: 1;
-    flex-basis: 100%;
-    padding: 10px;
-}
-
-@media all and (min-width: 780px){
-    .footer{order:4;}
-}
 /* -------------------------detallesReceta------- */
 
 aside{
@@ -162,15 +172,6 @@ aside{
     padding: 20px;
 }
 
-@media screen and (max-width: 780px){
-    aside{
-        background-color: #94B49F;
-        width: 100%;
-    }
-    .pasos{
-        width: 100%;
-    }
-}
 
 .pasos {
     display: grid;
@@ -233,4 +234,4 @@ aside{
     font-weight: 700;
     border: 1px solid #CCC;
     border-radius: 1.5rem;
-}
+}}
