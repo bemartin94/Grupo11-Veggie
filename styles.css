@@ -1,27 +1,3 @@
-@media screen and (max-width: 780px){
-    aside{
-        background-color: #94B49F;
-        width: 100%;
-    }
-    .pasos{
-        width: 100%;
-    }
-    
-        main, .navbar {   
-          flex-direction: column;
-        }
-      
-      .header, .footer{
-        flex-grow: 1;
-        flex-basis: 100%;
-        padding: 10px;
-    }
-}
-
-
-@media all and (min-width: 780px){
-    .footer{order:4;}
-
 .header, .footer{background: #DF7861;}
 * {
     padding: 0;
@@ -53,6 +29,109 @@ background-color: #FCF8E8;
 display: flex;
 flex-wrap: wrap;}
 
+
+.header-menubar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    margin: 0.5rem 0 0.5rem 1rem;
+    background-color: #94B49F;
+    border-radius: 30px;
+}
+
+.header-menubar ul{
+    list-style: none;
+}
+
+.header-menubar li {
+    display: flex;
+    justify-content: space-between;
+    float:left;
+    font-weight: 700;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.encabezado-home {
+    text-align:center;
+    padding: 10px;
+}
+
+.recetas-grid {padding: 2% 10% 2% 10%;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr) ) ;
+    grid-template-rows: repeat(auto-fit, minmax(200px, 1fr) );
+    color: #FFF;
+    align-items: center;
+  }
+
+  .secciones {
+    min-height: 50px;
+    margin: 0.5rem;
+    background-color: #fff;
+    border-radius: 5px;
+   
+    
+}    
+  .receta {
+    background-color: #ECB390;
+    border-radius: 5%;
+    padding: 0px;
+    text-align: center;
+
+  }
+
+  .receta-detalles {padding: 10px;
+}
+  .receta-imagen > img {  
+  max-width: 100%;
+        display: block;
+        height: auto;
+        margin: 0 auto;
+        border-radius: 5% 5% 0 0;
+        object-fit: cover;
+    
+     }
+
+
+@media screen and (max-width: 780px){
+    aside{
+        background-color: #94B49F;
+        width: 100%;
+    }
+    .pasos{
+        width: 100%;
+    }
+    
+        main, nav, header {   
+          flex-direction: column;
+          padding: 10px;
+        }
+      
+      .header, .footer{
+        flex-grow: 1;
+        flex-basis: 100%;
+        padding: 10px;
+    }
+    
+.recetas-grid {padding: 2% 10% 2% 10%;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(1, minmax(100px, 1fr) ) ;
+    grid-template-rows: repeat(auto-fit, minmax(100px, 1fr) );
+    color: #FFF;
+    align-items: center;
+    font-size: 80%;
+  }
+}
+
+
+@media all and (min-width: 780px){
+    .footer{order:4;}
+
 .home {
     min-height: 100px;
 /*     border: 2px blue solid;*/
@@ -62,9 +141,6 @@ flex-wrap: wrap;}
     width: 100%;
 }
 
-.encabezado-home {
-    text-align:center;
-}
 
 .flex-container-home {
     display: flex;
@@ -92,44 +168,14 @@ main>aside {
     margin: 0.5rem;
     float: left;
 }
-
-
-.recetas-grid {
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr) ) ;
-    grid-template-rows: repeat(auto-fit, minmax(200px, 1fr) );
-    color: #FFF;
-    align-items: center;
-  }
-
-  .receta {
-    background-color: #ECB390;
-    border-radius: 5px;
-    padding: 20px;
-    text-align: center;
-
-  }
-  .receta-imagen > img {  object-fit: cover; }
-
-
 .contenido-ppal { 
     display: flex;
     flex-wrap: wrap;
   }
 
   
-.secciones {
-    min-height: 50px;
-    margin: 0.5rem;
-    background-color: #fff;
-    border-radius: 5%;
-   
-    
-}    
 
 .secciones article{
-    border: 2px purple solid;
     margin: 0.5rem;
 }
 
