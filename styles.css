@@ -229,6 +229,10 @@ aside{
     background-color: #ECB390;
     padding: 10px;
     text-align: center;
+    
+}
+.pasos >div p{
+    display: flex;
 }
 .pasos > div{
     background-color: #94B49F;
