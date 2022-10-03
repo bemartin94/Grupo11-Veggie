@@ -1,8 +1,8 @@
 document.getElementById("idheader").innerHTML = `
-<div class="header-logo">
-            <img src="img/logo.png" alt="logo"></div> 
+
         <nav class="header-menubar">
-                
+        <div class="header-logo">
+        <img src="img/logo.png" alt="logo"></div> 
                     <div><a href="index.html">Inicio</a></div>
                     <div><a href="recetas.html">Recetas</a> </div>
                     <div><a href="http://somos.html">Quienes somos</a></div>
