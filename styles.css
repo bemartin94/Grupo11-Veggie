@@ -3,7 +3,7 @@
     --naranja: #DF7861;
     --amarillo:#ECB390;
     --verde: #94B49F ;
-    --verde-transparente: rgba(148, 180, 159, 0.9);
+    --verde-transparente: rgba(148, 180, 159, 0.95);
     
 }
 * {
@@ -15,8 +15,6 @@
     font-size: 16px;
     height: 100%;
  }
-
- .header, .footer{background: var(--naranja);}
 
  body, header, main, footer { 
 
@@ -74,17 +72,13 @@ a:link {
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
 }
 
-.header-menubar ul{
-    list-style: none;
-}
+.menu {  display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-grow: 1;
+    flex-wrap: wrap;
+  }
 
-.header-menubar li {
-    display: flex;
-    justify-content: space-between;
-    float:left;
-    text-align: center;
-    padding: 0.5rem;
-}
 
 .header-menubar a {
     font-size: 24px;
@@ -94,9 +88,6 @@ a:link {
     padding: 14px 16px;
     text-decoration: none;
   }
-
-  .header-menubar>img {width: 100%;
-    object-fit: cover;}
 
 .dropbtn {
     font-size: 24px;
@@ -137,6 +128,18 @@ a:link {
 .dropdown:hover .dropdown-content {
     display: block;
   }
+
+  
+    
+.burger-menu {
+    color: var(--primary-color);
+    font-size: 2rem;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    display: none;
+  }
+
   
 .encabezado-home {
     text-align:center;
@@ -191,16 +194,32 @@ a:link {
         width: 100%;
     }
     
-        main, nav, header {   
-          flex-direction: column;
-          padding: 10px;
-        }
-      
+
       .header, .footer{
         flex-grow: 1;
         flex-basis: 100%;
         padding: 10px;
     }
+
+.header-menubar
+{display:flex;}
+
+
+  .menu {
+        position: fixed;
+        background-color: var(--verde-transparente);
+        flex-direction: column;
+        top: 86px;
+        left: 10%;
+        width: 80%;
+        text-align: center;
+        transform: translateX(120%);
+        transition: transform 0.5s ease-in;
+      }
+    
+      
+  .header-menubar img {width: 200px;}
+
     
 .recetas-grid {padding: 2% 10% 2% 10%;
     display: grid;
@@ -212,11 +231,20 @@ a:link {
     font-size: 80%;
     object-fit: cover;
   }
+
+  .burger-menu {
+    display: block;
+  }
+
+  .menu.show {
+    transform: translateX(0);
+  }
 }
 
 
 @media all and (min-width: 780px){
     .footer{order:4;}
+
 
 .home {
     min-height: 100px;
