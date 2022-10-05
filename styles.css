@@ -131,7 +131,7 @@ a:link {
 
   
     
-.burger-menu {
+.burger-menu, .buscador-mobile button {
     color: var(--primary-color);
     font-size: 2rem;
     border: 0;
@@ -141,9 +141,33 @@ a:link {
   }
 
   
+.header-menubar input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+    font-family: "Montserrat";
+    border-radius: 10px 0px 0px 10px;
+  }
+  
+  .header-menubar .buscador button {
+    float: right;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: var(--naranja);
+    font-size: 17px;
+    border: none;
+    border-radius: 0px 10px 10px 0px;
+    cursor: pointer;
+  }
+  
+  .header-menubar .buscador button:hover {
+    background: #ccc;
+  }
 .encabezado-home {
     text-align:center;
-    padding: 10px;
+    padding: 40px;
 }
 
 .recetas-grid {padding: 2% 10% 2% 10%;
@@ -186,6 +210,16 @@ a:link {
 
 
 @media screen and (max-width: 780px){
+
+  
+.header-menubar input[type=text] {
+display: none;
+  }
+  
+  .header-menubar .buscador button {
+    display: none;
+  }
+  
     aside{
         background-color: var(--verde);
         width: 100%;
@@ -200,6 +234,16 @@ a:link {
         flex-basis: 100%;
         padding: 10px;
     }
+
+    .buscador {
+        transform: translateX(120%);
+        transition: transform 0.5s ease-in;
+    }
+
+    
+  .buscador.show {
+    transform: translateX(0);
+  }
 
 .header-menubar
 {display:flex;}
@@ -232,7 +276,7 @@ a:link {
     object-fit: cover;
   }
 
-  .burger-menu {
+  .burger-menu, .buscador-mobile button{
     display: block;
   }
 

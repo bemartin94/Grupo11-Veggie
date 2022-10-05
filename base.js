@@ -3,7 +3,7 @@ document.getElementById("idheader").innerHTML = `
         <nav class="header-menubar">
         
         <button class="burger-menu" id="burger-menu">
-        <i class="fa-duotone fa-bars"></i>
+        <i class="fa fa-bars"></i>
       </button>
         <div class="header-logo">
         <img src="img/logo.png" alt="logo"></div> 
@@ -17,7 +17,8 @@ document.getElementById("idheader").innerHTML = `
                     </div></div>
                     <div><a href="http://somos.html">Quienes somos</a></div>
                     <div><a href="contacto.html">Contacto</a></div></div>
-                    <div> <input type="text" placeholder="Search.."></div>
+                    <div class="buscador"> <input type="text" placeholder="Buscar..." class="buscador" id="buscador">     <button type="enviar"><i class="fa fa-search"></i></button></div> 
+                    <div class="buscador-mobile"><button type="submit" id="buscar"><i class="fa fa-search"></i></button></div> 
 
             
           
