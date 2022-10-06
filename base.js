@@ -18,7 +18,7 @@ document.getElementById("idheader").innerHTML = `
                     <div><a href="http://somos.html">Quienes somos</a></div>
                     <div><a href="contacto.html">Contacto</a></div></div>
                     <div class="buscador"> <input type="text" placeholder="Buscar..." class="buscador" id="buscador">     <button type="enviar"><i class="fa fa-search"></i></button></div> 
-                    <div class="buscador-mobile"><button type="submit" id="buscar"><i class="fa fa-search"></i></button></div> 
+                    <div class="buscador-mobile" id="buscador-mobile"><button type="submit" id="buscar"><i class="fa fa-search"></i></button></div> 
 
             
           
@@ -28,13 +28,18 @@ document.getElementById("idheader").innerHTML = `
 
 
 document.getElementById("idfooter").innerHTML = ` 
-<h2>elemtos footer</h2>
+<div class="footer">
+<a href="#" class="fa fa-instagram"></a>
+<a href="#" class="fa fa-facebook"></a>
+<a href="#" class="fa fa-youtube"></a></div>
 
 `
 
-const burger = document.querySelector("#burger-menu");
+const burger = document.querySelector(".burger-menu");
 const ul = document.querySelector(".menu");
 const nav = document.querySelector("nav");
+const searchbar = document.querySelector(".buscador")
+const searchicon = document.querySelector("#buscar")
 
 const navLink = document.querySelectorAll(".nav-link");
 
@@ -48,3 +53,18 @@ navLink.forEach((link) =>
     ul.classList.remove("show");
   })
 );
+
+
+searchicon.addEventListener("click", () => {
+  searchbar.classList.toggle("show");
+});
+
+
+const scrollUp = document.querySelector("#scroll-up");
+scrollUp.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: "smooth",
+  });
+});
