@@ -5,6 +5,7 @@
   --amarillo: #ecb390;
   --verde: #94b49f;
   --verde-transparente: rgba(148, 180, 159, 0.95);
+  --marron: rgb(70, 2, 2);
 }
 /* fin variables  */
 
@@ -19,14 +20,17 @@ html {
   font-size: 16px;
   height: 100%;
   font-family: "Montserrat", Helvetica, sans-serif;
+  color: var(--marron);
 }
 
 a:link {
-  color: #512100;
+  color: var(--crema);
+  text-decoration: none;
 }
 
 a:visited {
-  color: #512100;
+  color: var(--crema);
+  text-decoration: none;
 }
 
 a:hover {
@@ -231,6 +235,11 @@ main {
 
 
 /* página principal */
+.subtitulo {
+  text-align: center;
+  padding-top: 10px;
+}
+
 main > div {
   min-height: 100px;
   margin: 0.5rem;
@@ -284,7 +293,8 @@ main > aside {
 .receta-detalles {
   padding: 10px;
 }
-.receta-imagen > img {
+
+.recetas-grid a > img {
   max-width: 100%;
   display: block;
   margin: 0 auto;
@@ -292,6 +302,10 @@ main > aside {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.recetas-grid a > img:hover {
+  opacity: 0.9;
 }
 
 /* fin página principal */
