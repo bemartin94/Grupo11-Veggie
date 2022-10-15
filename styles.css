@@ -7,6 +7,7 @@
   --verde-transparente: rgba(148, 180, 159, 0.95);
   --marron: rgb(70, 2, 2);
 }
+
 /* fin variables  */
 
 /*reset de valores por defecto*/
@@ -54,6 +55,7 @@ main {
   display: flex;
   flex-wrap: wrap;
 }
+
 /*fin reset de valores por defecto*/
 
 
@@ -106,6 +108,7 @@ main {
   padding: 14px 16px;
   text-decoration: none;
 }
+
 /* menú desplegable*/
 .dropbtn {
   font-size: 24px;
@@ -113,6 +116,7 @@ main {
   font-weight: 600;
   text-align: center;
 }
+
 .dropdown {
   float: left;
   overflow: hidden;
@@ -143,6 +147,7 @@ main {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
 /* fin menú desplegable*/
 /* fin menú general*/
 
@@ -182,6 +187,7 @@ main {
 .up-arrow:hover {
   background: rgb(107, 107, 107);
 }
+
 /* fin buscador*/
 
 /* fin barra de navegación */
@@ -203,16 +209,17 @@ main {
   border-radius: 50px;
   padding-top: 10px;
 }
+
 /* fin scroll hacia arriba */
 
 /* footer*/
 
 .footer {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-grow: 1;
-  flex-wrap: wrap;
+  justify-content: center;
+  /* align-items: center; */
+  /* flex-grow: 1; */
+  /* flex-wrap: wrap; */
 
   background-color: var(--verde-transparente);
   width: 100%;
@@ -225,10 +232,11 @@ main {
 }
 
 .footer a {
-  width: 100%;
+  max-width: 50px;
   font-size: 40px;
   color: white;
   text-decoration: none;
+  padding: 2.5rem;
 }
 
 /* fin footer*/
@@ -240,7 +248,7 @@ main {
   padding-top: 10px;
 }
 
-main > div {
+main>div {
   min-height: 100px;
   margin: 0.5rem;
   height: auto;
@@ -248,11 +256,12 @@ main > div {
   width: 65%;
 }
 
-main > aside {
+main>aside {
   min-height: 100px;
   margin: 0.5rem;
   float: left;
 }
+
 .contenido-ppal {
   display: flex;
   flex-wrap: wrap;
@@ -283,6 +292,7 @@ main > aside {
   background-color: #fff;
   border-radius: 5px;
 }
+
 .receta {
   background-color: var(--amarillo);
   border-radius: 5%;
@@ -294,7 +304,7 @@ main > aside {
   padding: 10px;
 }
 
-.recetas-grid a > img {
+.recetas-grid a>img {
   max-width: 100%;
   display: block;
   margin: 0 auto;
@@ -304,7 +314,7 @@ main > aside {
   object-fit: cover;
 }
 
-.recetas-grid a > img:hover {
+.recetas-grid a>img:hover {
   opacity: 0.9;
 }
 
@@ -324,15 +334,18 @@ aside {
   flex-direction: nowrap;
   gap: 10px;
 }
+
 .box {
   background-color: var(--amarillo);
   padding: 10px;
   text-align: center;
 }
-.pasos > div p {
+
+.pasos>div p {
   display: flex;
 }
-.pasos > div {
+
+.pasos>div {
   background-color: var(--verde);
   margin: 10px;
 }
@@ -401,7 +414,7 @@ aside {
     display: none;
   }
 
-  
+
   .buscador {
     transform: translateX(120%);
     transition: transform 0.5s ease-in;
@@ -431,13 +444,16 @@ aside {
     background-color: var(--verde);
     width: 100%;
   }
+
   .pasos {
     width: 100%;
   }
+
   .header-menubar {
     display: flex;
   }
-/* menu hamburguesa */
+
+  /* menu hamburguesa */
   .menu {
     position: fixed;
     background-color: var(--verde-transparente);
@@ -468,6 +484,7 @@ aside {
   .header-menubar input[type="text"] {
     display: none;
   }
+
   .header-menubar img {
     width: 200px;
   }
@@ -480,7 +497,10 @@ aside {
   .buscador button {
     display: none;
   }
-  .home {width: 100%;}
+
+  .home {
+    width: 100%;
+  }
 }
 
 /*fin media queries para tablet */
@@ -505,11 +525,11 @@ aside {
     justify-content: center;
   }
 
-  .flex-container-home > div {
+  .flex-container-home>div {
     margin: 10px;
     padding: 20px;
     font-size: 30px;
   }
 }
-  /*fin media queries para laptop y superior */
 
+/*fin media queries para laptop y superior */
