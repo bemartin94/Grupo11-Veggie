@@ -1,4 +1,4 @@
-document.getElementById("idheader").innerHTML = `
+document.getElementById("idheader").innerHTML = /*html */`
 
         <nav class="header-menubar">
         
@@ -27,7 +27,7 @@ document.getElementById("idheader").innerHTML = `
 `
 
 
-document.getElementById("idfooter").innerHTML = ` 
+document.getElementById("idfooter").innerHTML = /*html */` 
 <div class="footer">
 <a href="#" class="fa fa-instagram"></a>
 <a href="#" class="fa fa-facebook"></a>
