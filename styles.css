@@ -47,7 +47,7 @@ body {
 }
 
 main {
-  margin-top: 200px;
+  margin-top: 100px;
   min-height: 75vh;
   align-content: center;
   overflow: auto;
@@ -62,6 +62,9 @@ main {
 /*color de iconos FontAwesome*/
 .fa {
   color: #fff;
+}
+.fa:hover{
+  text-shadow: 1px 1px 3px gray;
 }
 
 /* barra de navegación */
@@ -90,6 +93,11 @@ main {
   margin: 0.5rem;
 }
 
+.logo{ width: 400px;}
+
+.logo-mini {
+  display: none;
+}
 /* menú general*/
 
 .menu {
@@ -109,12 +117,25 @@ main {
   text-decoration: none;
 }
 
+.header-menubar a:hover {
+  font-size: 24px;
+  color: white;
+  font-weight: 600;
+  text-align: center;
+  padding: 14px 16px;
+  text-shadow: 1px 1px 3px gray;
+}
+
 /* menú desplegable*/
 .dropbtn {
   font-size: 24px;
   color: white;
   font-weight: 600;
   text-align: center;
+}
+.dropbtn:hover{
+  text-shadow: 1px 1px 3px gray;
+  
 }
 
 .dropdown {
@@ -217,9 +238,7 @@ main {
 .footer {
   display: flex;
   justify-content: center;
-  /* align-items: center; */
-  /* flex-grow: 1; */
-  /* flex-wrap: wrap; */
+
 
   background-color: var(--verde-transparente);
   width: 100%;
@@ -276,7 +295,7 @@ main>aside {
   padding: 40px;
 }
 
-.recetas-grid {
+.recetas-grid, .listado-grid {
   padding: 2% 10% 2% 10%;
   display: grid;
   grid-gap: 20px;
@@ -320,6 +339,26 @@ main>aside {
 
 /* fin página principal */
 
+
+/* listado de recetas */
+.todas {
+  text-align: left;
+  padding-top: 10px;
+}
+
+.listado-recetas {
+  display: grid;
+  grid-template-columns: 2fr 1fr 0fr; 
+  grid-template-rows: 1fr 1fr 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    ". . ."
+    ". . ."
+    ". . ."; 
+}
+/* fin listado de recetas */
+
+
 /*  página de receta */
 
 aside {
@@ -346,8 +385,18 @@ aside {
 }
 
 .pasos>div {
-  background-color: var(--verde);
+  text-align: left;
+  width: auto;
+  background-color: white;
   margin: 10px;
+border: var(--verde);
+border-style: dashed;
+border-width: 3px;
+border-radius: 10px;
+}
+
+input[type=checkbox]:checked + span.ingrediente{
+  text-decoration: line-through;
 }
 
 /* fin página de receta */
@@ -406,6 +455,10 @@ aside {
 /* media queries para celular */
 
 @media screen and (max-width: 500px) {
+
+  .header-menubar, .logo-mini {margin: 0;
+  padding: 0;}
+
   .header-menubar input[type="text"] {
     display: none;
   }
@@ -424,7 +477,7 @@ aside {
     transform: translateX(0);
   }
 
-  .header-menubar img {
+.logo {
     width: 200px;
   }
 
@@ -474,19 +527,26 @@ aside {
   .menu.show {
     transform: translateX(0);
   }
+
+.logo{ display:none;}
+
+.logo-mini {
+  display: block;
+  width: 120px;
+}
 }
 
 /* fin menu hamburguesa */
 /* fin media queries para celular */
 
 /* media queries para tablet */
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 950px) {
   .header-menubar input[type="text"] {
     display: none;
   }
 
-  .header-menubar img {
-    width: 200px;
+  .logo {
+    width: 250px;
   }
 
   .buscador-mobile button {
@@ -498,7 +558,7 @@ aside {
     display: none;
   }
 
-  .home {
+  .home, .listado {
     width: 100%;
   }
 }
@@ -507,7 +567,7 @@ aside {
 
 /* media queries para laptop y superior */
 
-@media all and (min-width: 900px) {
+@media all and (min-width: 950px) {
   .footer {
     order: 4;
   }

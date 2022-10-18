@@ -6,10 +6,11 @@ document.getElementById("idheader").innerHTML = /*html */`
         <i class="fa fa-bars"></i>
       </button>
         <div class="header-logo">
-        <img src="img/logo.png" alt="logo"></div> 
+        <img src="img/logo-mini.png" alt="logo" class="logo-mini"></div> 
+        <img src="img/logo.png" alt="logo" class="logo"></div> 
         <div class="menu">
                     <div><a href="index.html">Inicio</a></div>
-                    <div class="dropdown">      <button class="dropbtn">Recetas    <i class="fa fa-caret-down"></i>       </button>
+                    <div class="dropdown">      <button class="dropbtn"><a href="recetas.html">Recetas  </a>  <i class="fa fa-caret-down"></i>       </button>
                     <div class="dropdown-content">
                       <a href="#">Guisos</a><br>
                       <a href="#">Panes</a><br>
@@ -28,6 +29,7 @@ document.getElementById("idheader").innerHTML = /*html */`
 
 
 document.getElementById("idfooter").innerHTML = /*html */` 
+
 <div class="footer">
 <a href="#" class="fa fa-instagram"></a>
 <a href="#" class="fa fa-facebook"></a>
