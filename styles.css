@@ -56,6 +56,70 @@ main {
   flex-wrap: wrap;
 }
 
+
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+
+.container input:checked ~ .checkmark {
+  background-color: var(--naranja);
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
 /*fin reset de valores por defecto*/
 
 
@@ -295,7 +359,7 @@ main>aside {
   padding: 40px;
 }
 
-.recetas-grid, .listado-grid {
+.recetas-grid {
   padding: 2% 10% 2% 10%;
   display: grid;
   grid-gap: 20px;
@@ -345,21 +409,68 @@ main>aside {
   text-align: left;
   padding-top: 10px;
 }
-
-.listado-recetas {
-  display: grid;
-  grid-template-columns: 2fr 1fr 0fr; 
-  grid-template-rows: 1fr 1fr 1fr; 
-  gap: 0px 0px; 
-  grid-template-areas: 
-    ". . ."
-    ". . ."
-    ". . ."; 
+.navegar-recetas {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "listado listado filtros"
+    "listado listado filtros"
+    "listado listado filtros";
+    width: 100%;
 }
+
+.listado { grid-area: listado; }
+
+.filtros { grid-area: filtros;
+    text-align: left;
+    width: auto;
+    margin: 10px;
+    padding: 10px;
+  border: var(--verde);
+  border-style: dashed;
+  border-width: 3px;
+  border-radius: 10px;
+   }
+
+
+.recetas-grid-1 {
+  padding: 2% 10% 2% 10%;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(1, minmax(300px, 700px));
+  grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
+  color: #fff;
+  align-items: center;
+}
+
+.recetas-grid-1 a>img {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+  border-radius: 5% 5% 0 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.recetas-grid-1 a>img:hover {
+  opacity: 0.9;
+}
+
+.receta-1 {
+  background-color: var(--amarillo);
+  border-radius: 5%;
+  padding: 0px;
+  text-align: left;
+  display: flex;
+}
+
 /* fin listado de recetas */
 
 
-/*  página de receta */
+/*  página de receta detallada */
 
 aside {
   background-color: var(--crema);
