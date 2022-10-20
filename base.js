@@ -6,7 +6,7 @@ document.getElementById("idheader").innerHTML = /*html */`
         <i class="fa fa-bars"></i>
       </button>
         <div class="header-logo">
-        <img src="img/logo-mini.png" alt="logo" class="logo-mini"></div> 
+        <a href="index.html"><img src="img/logo-mini.png" alt="logo" class="logo-mini"></a></div> 
         <img src="img/logo.png" alt="logo" class="logo"></div> 
         <div class="menu">
                     <div><a href="index.html">Inicio</a></div>

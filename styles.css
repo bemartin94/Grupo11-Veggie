@@ -86,7 +86,7 @@ main {
   left: 0;
   height: 25px;
   width: 25px;
-  background-color: #eee;
+  background-color: #fff;
 }
 
 
@@ -162,6 +162,11 @@ main {
 .logo-mini {
   display: none;
 }
+
+.logo-mini a>img{
+  display: none;
+}
+
 /* menú general*/
 
 .menu {
@@ -440,7 +445,6 @@ main>aside {
   display: grid;
   grid-gap: 20px;
   grid-template-columns: repeat(1, minmax(300px, 700px));
-  grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
   color: #fff;
   align-items: center;
 }
@@ -449,7 +453,7 @@ main>aside {
   max-width: 100%;
   display: block;
   margin: 0 auto;
-  border-radius: 5% 5% 0 0;
+  border-radius: 5% 0 0 5%;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -461,7 +465,7 @@ main>aside {
 
 .receta-1 {
   background-color: var(--amarillo);
-  border-radius: 5%;
+  border-radius: 10px;
   padding: 0px;
   text-align: left;
   display: flex;
@@ -567,7 +571,12 @@ input[type=checkbox]:checked + span.ingrediente{
 
 @media screen and (max-width: 500px) {
 
-  .header-menubar, .logo-mini {margin: 0;
+  .logo-mini {
+    display: inline-block;
+    width: 120px;
+  }
+
+  .header-menubar, .logo-mini a>img{margin: 0;
   padding: 0;}
 
   .header-menubar input[type="text"] {
@@ -641,7 +650,8 @@ input[type=checkbox]:checked + span.ingrediente{
 
 .logo{ display:none;}
 
-.logo-mini {
+
+.logo-mini a>img {
   display: block;
   width: 120px;
 }
