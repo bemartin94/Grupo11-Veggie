@@ -48,7 +48,7 @@ body {
 }
 
 main {
-  margin-top: 200px;
+  margin-top: 100px;
   min-height: 75vh;
   align-content: center;
   overflow: auto;
@@ -57,12 +57,79 @@ main {
   flex-wrap: wrap;
 }
 
+
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #fff;
+}
+
+
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+
+.container input:checked ~ .checkmark {
+  background-color: var(--naranja);
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
 /*fin reset de valores por defecto*/
 
 
 /*color de iconos FontAwesome*/
 .fa {
   color: #fff;
+}
+.fa:hover{
+  text-shadow: 1px 1px 3px gray;
 }
 
 /* barra de navegación */
@@ -91,6 +158,16 @@ main {
   margin: 0.5rem;
 }
 
+.logo{ width: 400px;}
+
+.logo-mini {
+  display: none;
+}
+
+.logo-mini a>img{
+  display: none;
+}
+
 /* menú general*/
 
 .menu {
@@ -110,12 +187,25 @@ main {
   text-decoration: none;
 }
 
+.header-menubar a:hover {
+  font-size: 24px;
+  color: white;
+  font-weight: 600;
+  text-align: center;
+  padding: 14px 16px;
+  text-shadow: 1px 1px 3px gray;
+}
+
 /* menú desplegable*/
 .dropbtn {
   font-size: 24px;
   color: white;
   font-weight: 600;
   text-align: center;
+}
+.dropbtn:hover{
+  text-shadow: 1px 1px 3px gray;
+  
 }
 
 .dropdown {
@@ -218,9 +308,7 @@ main {
 .footer {
   display: flex;
   justify-content: center;
-  /* align-items: center; */
-  /* flex-grow: 1; */
-  /* flex-wrap: wrap; */
+
 
   background-color: var(--verde-transparente);
   width: 100%;
@@ -321,7 +409,73 @@ main>aside {
 
 /* fin página principal */
 
-/*  página de receta */
+
+/* listado de recetas */
+.todas {
+  text-align: left;
+  padding-top: 10px;
+}
+.navegar-recetas {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "listado listado filtros"
+    "listado listado filtros"
+    "listado listado filtros";
+    width: 100%;
+}
+
+.listado { grid-area: listado; }
+
+.filtros { grid-area: filtros;
+    text-align: left;
+    width: auto;
+    margin: 10px;
+    padding: 10px;
+  border: var(--verde);
+  border-style: dashed;
+  border-width: 3px;
+  border-radius: 10px;
+   }
+
+
+.recetas-grid-1 {
+  padding: 2% 10% 2% 10%;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(1, minmax(300px, 700px));
+  color: #fff;
+  align-items: center;
+}
+
+.recetas-grid-1 a>img {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+  border-radius: 5% 0 0 5%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.recetas-grid-1 a>img:hover {
+  opacity: 0.9;
+}
+
+.receta-1 {
+  background-color: var(--amarillo);
+  border-radius: 10px;
+  padding: 0px;
+  text-align: left;
+  display: flex;
+}
+
+/* fin listado de recetas */
+
+
+/*  página de receta detallada */
 
 aside {
   background-color: var(--crema);
@@ -348,8 +502,18 @@ aside {
 }
 
 .pasos>div {
-  background-color: var(--verde);
+  text-align: left;
+  width: auto;
+  background-color: white;
   margin: 10px;
+border: var(--verde);
+border-style: dashed;
+border-width: 3px;
+border-radius: 10px;
+}
+
+input[type=checkbox]:checked + span.ingrediente{
+  text-decoration: line-through;
 }
 
 /* fin página de receta */
@@ -408,6 +572,15 @@ aside {
 /* media queries para celular */
 
 @media screen and (max-width: 500px) {
+
+  .logo-mini {
+    display: inline-block;
+    width: 120px;
+  }
+
+  .header-menubar, .logo-mini a>img{margin: 0;
+  padding: 0;}
+
   .header-menubar input[type="text"] {
     display: none;
   }
@@ -426,7 +599,7 @@ aside {
     transform: translateX(0);
   }
 
-  .header-menubar img {
+.logo {
     width: 200px;
   }
 
@@ -476,19 +649,27 @@ aside {
   .menu.show {
     transform: translateX(0);
   }
+
+.logo{ display:none;}
+
+
+.logo-mini a>img {
+  display: block;
+  width: 120px;
+}
 }
 
 /* fin menu hamburguesa */
 /* fin media queries para celular */
 
 /* media queries para tablet */
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 950px) {
   .header-menubar input[type="text"] {
     display: none;
   }
 
-  .header-menubar img {
-    width: 200px;
+  .logo {
+    width: 250px;
   }
 
   .buscador-mobile button {
@@ -500,7 +681,7 @@ aside {
     display: none;
   }
 
-  .home {
+  .home, .listado {
     width: 100%;
   }
 }
@@ -509,7 +690,7 @@ aside {
 
 /* media queries para laptop y superior */
 
-@media all and (min-width: 900px) {
+@media all and (min-width: 950px) {
   .footer {
     order: 4;
   }
