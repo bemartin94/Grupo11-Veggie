@@ -9,20 +9,10 @@
     <link href='//fonts.googleapis.com/css?family=Montserrat:thin,extra-light,light,100,200,300,400,500,600,700,800' 
     rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="api.js"> -->
   </head>
   <body>
     <header id="idheader">
-      <div class="header-logo">
-        <img src="img/logo.png" alt="logo" />
-      </div>
-      <nav class="header-menubar">
-        <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="recetas.html">Recetas</a></li>
-          <li><a href="http://somos.html">Quienes somos</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-      </nav>
     </header>
     <main>
       <aside id="ingredientes">
@@ -53,6 +43,10 @@
             Ingrediente
           </ul>
         </div>
+        <button type="button" id="search">
+          Valor Nutricional
+        </button>
+        <div id="content"></div>
       </aside>
       <div>
         <div class="pasos">
@@ -138,5 +132,6 @@
    </i>
     <footer id="idfooter"></footer>
     <script src="base.js"></script>
+    <script src="api.js"></script>
   </body>
 </html>
