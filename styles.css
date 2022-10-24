@@ -3,6 +3,7 @@
   --crema: #fcf8e8;
   --naranja: #df7861;
   --amarillo: #ecb390;
+  --amarillo-claro: #e9c5af;
   --verde: #94b49f;
   --verde-transparente: rgba(148, 180, 159, 0.95);
   --marron: rgb(70, 2, 2);
@@ -384,7 +385,7 @@ main>aside {
 
 .receta {
   background-color: var(--amarillo);
-  border-radius: 5%;
+  border-radius: 15px;
   padding: 0px;
   text-align: center;
 }
@@ -438,6 +439,7 @@ main>aside {
   border-style: dashed;
   border-width: 3px;
   border-radius: 10px;
+  height: 100%;
    }
 
 
@@ -484,6 +486,7 @@ aside {
 }
 
 .pasos {
+  width: 80%;
   display: grid;
   list-style-type: none;
   flex-direction: nowrap;
@@ -494,6 +497,7 @@ aside {
 .box {
   background-color: var(--amarillo);
   padding: 10px;
+  border-radius: 15px;
   text-align: center;
 }
 
@@ -504,12 +508,9 @@ aside {
 .pasos>div {
   text-align: left;
   width: auto;
-  background-color: white;
+
   margin: 10px;
-border: var(--verde);
-border-style: dashed;
-border-width: 3px;
-border-radius: 10px;
+
 }
 
 input[type=checkbox]:checked + span.ingrediente{
