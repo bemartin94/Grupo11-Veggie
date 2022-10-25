@@ -42,18 +42,31 @@ async function sendApiRequest(){
     console.log(response)
     let data = await response.json()
     console.log(data)
+    return data
 } 
-sendApiRequest()
-const useApiData=(data) =>{
-    document.getElementById('content').innerHTML=/*html*/`
+
+/* const useApiData=(data) =>{
+    document.getElementById('content').innerHTML=/*html*`
     <div>
         <h1> Valor Nutricional</h1>
-        <h3>${data.calories}</h3>
-        <p>dieta ${data.dietLabels}</p>
+        <h3>Calorias: ${data.calories}</h3>
+        <p>Dieta: ${data.dietLabels}</p>
     </div>
     `
-}  
+}   */
 
+async function useApiData(){
+    data = await sendApiRequest()
+    document.querySelector("#content").innerHTML= /*html*/`
+    <div class="card-body">
+        <h1> Valor Nutricional</h1>
+        <h3>Calorias: ${data.calories}</h3>
+        <p>Dieta: ${data.dietLabels}</p>
+    </div>
+    `
+}
+
+useApiData()
 /* const {createApp} = Vue 
 createApp({
     
