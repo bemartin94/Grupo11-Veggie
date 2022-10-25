@@ -7,9 +7,9 @@ document.getElementById("idheader").innerHTML = /*html */`
       </button>
         <div class="header-logo">
         <a href="index.html"><img src="img/logo-mini.png" alt="logo" class="logo-mini"></a></div> 
-        <img src="img/logo.png" alt="logo" class="logo"></div> 
+        <a href="index.html"><img src="img/logo.png" alt="logo" class="logo"></a></div> 
         <div class="menu">
-                    <div><a href="index.html">Inicio</a></div>
+              
                     <div class="dropdown">      <button class="dropbtn"><a href="recetas.html">Recetas  </a>  <i class="fa fa-caret-down"></i>       </button>
                     <div class="dropdown-content">
                       <a href="#">Guisos</a><br>

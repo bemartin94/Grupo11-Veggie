@@ -9,16 +9,16 @@
     <link href='//fonts.googleapis.com/css?family=Montserrat:thin,extra-light,light,100,200,300,400,500,600,700,800' 
     rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>  -->
-    <!-- <link rel="stylesheet" href="api.js"> -->
+
   </head>
   <body>
     <header id="idheader">
     </header>
     <main>
-      <aside class="filtros">
-        <div id="lista">
-          <h2>Ingredientes</h2>
+      <aside class="aside-receta ">
+        <div class="ingredientes">
+          <h2 class="encabezado-ingredientes">Ingredientes</h2>
+          <div class="divider-ingredientes"></div>
           <ul>
             <input type="checkbox" name="opcion" value="" />
             <span class="ingrediente">Ingrediente</span>
@@ -44,38 +44,71 @@
              <span class="ingrediente">Ingrediente</span>
           </ul>
         </div>
-        <!-- <button type="button" id="search">
-          Valor Nutricional
-        </button> -->
-        <div id="content">
-          Elementos de la api
-          
+        <div class="ficha-tecnica">
+          <h2 class="encabezado-ficha">Ficha técnica</h2>
+          <div class="divider-ficha"></div>
+          <h3>Tiempo de preparación</h3>
+          <p>Activo: X minutos</p>
+          <p>Total: X minutos</p>
+          <h3>Rendimiento</h3>
+          <p>X porciones</p>
+          <div id="content">
+            Elementos de la api
+            
+          </div>
         </div>
+        
+   
       </aside>
-      <div>
+      <aside>
+        <div class="info-receta"></div></aside>
+     
         <div class="pasos">
-          <img
-            src="img/stock-photo-roasted-chickpeas-falafel-patties-with-garlic-yogurt-sauce-top-view-black-background-788819389.jpg"
-            alt="Una receta"
-          />
+          <h1 class="titulo-receta">Hamburguesa de porotos negros</h1>
+   
+         
+          <div class="box">
+        
+       
+            <img src="img/hamburguesa_porotos.jpg"
+            alt="Una receta">
+            <h2> Introducción</h2>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Perspiciatis quod vero enim perferendis nam adipisci veniam
+              laudantium facilis corporis est impedit, sequi molestiae. Impedit
+              quaerat velit veritatis non labore libero.   </p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Perspiciatis quod vero enim perferendis nam adipisci veniam
+              laudantium facilis corporis est impedit, sequi molestiae. Impedit
+              quaerat velit veritatis non labore libero.   </p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Perspiciatis quod vero enim perferendis nam adipisci veniam
+              laudantium facilis corporis est impedit, sequi molestiae. Impedit
+              quaerat velit veritatis non labore libero.
+            </p>
+   
+      </div>
+          
 
           <div class="box">
-            <h2> Paso 1</h2>
-            <div class="instruccion">
-                <img src="img/stock-photo-roasted-chickpeas-falafel-patties-with-garlic-yogurt-sauce-top-view-black-background-788819389.jpg"
+        
+       
+                <img src="img/hamburguesa_pasos_1.jpg"
                 alt="Una receta">
+                <h2> Paso 1</h2>
                 <p>
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                   Perspiciatis quod vero enim perferendis nam adipisci veniam
                   laudantium facilis corporis est impedit, sequi molestiae. Impedit
                   quaerat velit veritatis non labore libero.
                 </p>
-            </div>
+       
           </div>
           <div class="box">
-            <h2>Paso 2</h2>
-            <img src="img/stock-photo-roasted-chickpeas-falafel-patties-with-garlic-yogurt-sauce-top-view-black-background-788819389.jpg"
+            <img src="img/hamburguesa_pasos_2.jpg"
                 alt="Una receta">
+                <h2>Paso 2</h2>
             <p>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 Perspiciatis quod vero enim perferendis nam adipisci veniam
@@ -84,9 +117,9 @@
               </p>
           </div>
           <div class="box">
-            <h2>Paso 3</h2>
-            <img src="img/stock-photo-roasted-chickpeas-falafel-patties-with-garlic-yogurt-sauce-top-view-black-background-788819389.jpg"
+            <img src="img/haburguesas_pasos_3.jpg"
                 alt="Una receta">
+                <h2>Paso 3</h2>
             <p>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 Perspiciatis quod vero enim perferendis nam adipisci veniam
@@ -94,53 +127,19 @@
                 quaerat velit veritatis non labore libero.
               </p>
           </div>
-          <div class="box">
-            <h2>Paso 4</h2>
-            <img src="img/stock-photo-roasted-chickpeas-falafel-patties-with-garlic-yogurt-sauce-top-view-black-background-788819389.jpg"
-                alt="Una receta">
-            <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Perspiciatis quod vero enim perferendis nam adipisci veniam
-                laudantium facilis corporis est impedit, sequi molestiae. Impedit
-                quaerat velit veritatis non labore libero.
-              </p>
-          </div>
-          <div class="box">
-            <h2>Paso 5</h2>
-            <img src="img/stock-photo-roasted-chickpeas-falafel-patties-with-garlic-yogurt-sauce-top-view-black-background-788819389.jpg"
-                alt="Una receta">
-            <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Perspiciatis quod vero enim perferendis nam adipisci veniam
-                laudantium facilis corporis est impedit, sequi molestiae. Impedit
-                quaerat velit veritatis non labore libero.
-              </p>
-
-           
-          </div>
-          <div class="box video">Video con instrucciones detalladas paso a paso:<br>
+  
+          <div class="box"><h3>Video con instrucciones detalladas paso a paso:</h3><br>
             <iframe width="420" height="315"
             src="https://www.youtube.com/embed/BMgLRD2v5w0">
             </iframe></div>
-          <!-- <div>
-                    <h2>Paso 1</h2>
-                    <ul>realizar una determinada tarea</ul>
-                </div>
-                <div>
-                    <h2>Paso 2</h2>
-                    <ul>realizar una determinada tarea</ul>
-                </div>
-                <div>
-                    <h2>Paso 3</h2>
-                    <ul>realizar una determinada tarea</ul>
-                </div> -->
+
         </div>
       </div>
     </main>
     <i class="scroll-up" id="scroll-up"
     ><i class="fa fa-arrow-up socicon up-arrow"></i>
    </i>
-    <!-- <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> -->
+
     <footer id="idfooter"></footer>
     <script src="base.js"></script>
     <script src="api.js"></script>

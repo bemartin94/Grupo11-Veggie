@@ -13,8 +13,8 @@ async function useApiData(){
     data = await sendApiRequest()
     document.querySelector("#content").innerHTML= /*html*/`
     <div class="card-body">
-        <h1> Valor Nutricional</h1>
-        <h3>Calorias: ${data.calories}</h3>
+        <h3> Valor Nutricional</h3>
+        <p>Calorias: ${data.calories}</p>
         
     </div>
     `

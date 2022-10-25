@@ -55,11 +55,11 @@ main {
   overflow: auto;
   background-color: var(--crema);
   display: flex;
-  flex-wrap: wrap;
+  border-radius: 0%;
 }
 
 
-.container {
+.container-checkbox {
   display: block;
   position: relative;
   padding-left: 35px;
@@ -73,7 +73,7 @@ main {
 }
 
 
-.container input {
+.container-checkbox input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -92,12 +92,12 @@ main {
 }
 
 
-.container:hover input ~ .checkmark {
+.container-checkbox:hover input ~ .checkmark {
   background-color: #ccc;
 }
 
 
-.container input:checked ~ .checkmark {
+.container-checkbox input:checked ~ .checkmark {
   background-color: var(--naranja);
 }
 
@@ -107,11 +107,11 @@ main {
   display: none;
 }
 
-.container input:checked ~ .checkmark:after {
+.container-checkbox input:checked ~ .checkmark:after {
   display: block;
 }
 
-.container .checkmark:after {
+.container-checkbox .checkmark:after {
   left: 9px;
   top: 5px;
   width: 5px;
@@ -161,6 +161,8 @@ main {
 
 .logo{ width: 400px;}
 
+
+
 .logo-mini {
   display: none;
 }
@@ -184,7 +186,7 @@ main {
   color: white;
   font-weight: 600;
   text-align: center;
-  padding: 14px 16px;
+
   text-decoration: none;
 }
 
@@ -193,7 +195,7 @@ main {
   color: white;
   font-weight: 600;
   text-align: center;
-  padding: 14px 16px;
+
   text-shadow: 1px 1px 3px gray;
 }
 
@@ -361,9 +363,14 @@ main>aside {
   margin: 0.5rem;
 }
 
-.encabezado-home {
+.encabezado {
   text-align: center;
-  padding: 40px;
+  padding: 20px;
+}
+ 
+.intro {
+  text-align: center;
+  font-size: 1.5rem;
 }
 
 .recetas-grid {
@@ -385,7 +392,7 @@ main>aside {
 
 .receta {
   background-color: var(--amarillo);
-  border-radius: 15px;
+  border-radius: 5%;
   padding: 0px;
   text-align: center;
 }
@@ -399,15 +406,24 @@ main>aside {
   display: block;
   margin: 0 auto;
   border-radius: 5% 5% 0 0;
-  width: 100%;
-  height: 100%;
+  
   object-fit: cover;
+  width: 100%;
+  height: 40vh;
 }
+
 
 .recetas-grid a>img:hover {
   opacity: 0.9;
 }
 
+.recetas-grid > img {
+  
+    object-fit: cover;
+    width: 100%;
+    height: 100vh;
+    
+}
 /* fin página principal */
 
 
@@ -415,6 +431,8 @@ main>aside {
 .todas {
   text-align: left;
   padding-top: 10px;
+  color: var(--marron);
+  font-size: 2rem;
 }
 .navegar-recetas {  display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -430,7 +448,7 @@ main>aside {
 
 .listado { grid-area: listado; }
 
-.filtros { grid-area: filtros;
+.filtros { 
     text-align: left;
     width: auto;
     margin: 10px;
@@ -441,7 +459,6 @@ main>aside {
   border-radius: 10px;
   height: 100%;
    }
-
 
 .recetas-grid-1 {
   padding: 2% 10% 2% 10%;
@@ -474,6 +491,11 @@ main>aside {
   display: flex;
 }
 
+.titulo-filtros {
+  text-align: center;
+
+}
+
 /* fin listado de recetas */
 
 
@@ -495,7 +517,7 @@ aside {
 }
 
 .box {
-  background-color: var(--amarillo);
+  background-color: #fff;
   padding: 10px;
   border-radius: 15px;
   text-align: center;
@@ -507,7 +529,7 @@ aside {
 
 .pasos>div {
   text-align: left;
-  width: auto;
+  width: 70%;
 
   margin: 10px;
 
@@ -516,6 +538,85 @@ aside {
 input[type=checkbox]:checked + span.ingrediente{
   text-decoration: line-through;
 }
+
+
+.box > img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.titulo-receta {
+  width: 70%;
+  background-color: var(--amarillo);
+  color: #fff;
+  border-radius: 10px;
+  min-height: 70px;
+padding-top: 10px;
+text-align: center;
+}
+
+
+.ingredientes { 
+  text-align: left;
+  width: auto;
+  margin: 10px;
+  padding: 10px;
+border: var(--verde);
+border-style: dashed;
+border-width: 3px;
+border-radius: 10px;
+height: auto;
+ }
+
+ .ficha-tecnica { 
+  text-align: left;
+  width: auto;
+  margin: 10px;
+  padding: 10px;
+border: var(--naranja);
+border-style: dashed;
+border-width: 3px;
+border-radius: 10px;
+height: auto;
+ }
+
+ .aside-receta { 
+  text-align: left;
+  width: auto;
+  margin: 10px;
+  padding: 10px;
+  height: 100%;
+ }
+
+ .encabezado-ficha {
+
+  color: var(--naranja);
+  margin: 0;
+  padding: 0;
+
+ }
+
+ .encabezado-ingredientes {
+  color: var(--verde);
+  margin: 0;
+  padding: 0;
+ }
+
+.divider-ingredientes {
+  border-bottom: 3px dashed var(--verde);
+  margin: 0;
+  padding: 0;
+  clear: right;
+
+}
+.divider-ficha {
+  border-bottom: 3px dashed var(--naranja);
+  margin:  0;
+  clear: right;
+
+}
+
+
 
 /* fin página de receta */
 
